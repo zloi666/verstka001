@@ -1,0 +1,424 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #349ce6;
+	text-decoration: underline;
+}
+a:hover {
+	color: #0c63a9;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+
+
+body {
+    background-color: #282828;
+	background-image: url(../img/bg.png);
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+}
+
+.center-block {
+	max-width: 980px;
+	min-width: 980px;
+	margin: 0 auto;
+}
+
+.header__nav-area {
+	background-color: rgba(0,0,0,0.3);
+	font-size: 0.8em;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.header__nav {
+	float: left;
+        text-transform: lowercase;
+}
+
+.header__nav > ul > li {
+	float: left;
+	border-right: 2px solid black;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.header__nav > ul > li:last-child {
+	border-right: none;
+}
+
+.header__nav > ul > li:first-child {
+	padding-left: 0;
+}
+
+.header__nav > ul > li a {
+	text-decoration: none;
+	color: #818082;
+}
+.header__nav > ul > li a:hover {
+	text-decoration: underline;
+}
+
+.header-social {
+	float: right;
+}
+
+.header-social > ul > li {
+	float: left;
+	border-right: 2px solid black;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.header-social > ul > li:last-child {
+	border-right: none;
+	padding-right: 0;
+}
+
+.header-social > ul > li a {
+	text-decoration: none;
+	color: #818082;
+}
+.header-social > ul > li a:hover {
+	text-decoration: underline;
+}
+
+.header-logo-area {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.logo {
+	float: left;
+}
+
+.search {
+	float: right;
+	border-radius: 20px;
+	background-color: rgba(0,0,0,0.8);
+	font-size: 0.7em;
+	width: 250px;
+	height: 35px;
+	padding-left: 15px;
+	position: relative;
+}
+
+.search-input {
+	background-color: rgba(0,0,0,0.5);
+	border: none;
+	position: absolute;
+	top: 12px;
+	color: #fff;
+}
+
+.search-image {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.main-navigation {
+	font-family: 'Play', 'Arial', sans-serif;
+	font-weight: 700;
+	background-image: url(../img/bg-nav.png);
+	height: 60px;
+	box-shadow: 2px 5px 5px rgba(0,0,0,0.4);
+	min-width: 865px;
+	margin-bottom: 30px;
+}
+
+.main-navigation > nav > ul {
+	font-size: 0;
+}
+
+.main-navigation > nav > ul > li {
+	text-transform: uppercase;
+	display: inline-block;
+	border-right: 1px solid #326186;
+	border-left: 1px solid #4995c9;
+	font-size: 16px;
+}
+
+.main-navigation > nav > ul > li:first-child {
+	border-left: 0;
+}
+
+.main-navigation > nav > ul > li a {
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-shadow: 2px 2px 2px #333;
+
+}
+
+.main-navigation > nav > ul > li a:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+
+.slider-wrapper {
+	height: 475px;
+}
+
+
+.slider-wrapper-picture {
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+	position: relative;
+	height: 420px;
+	margin-bottom: 15px;
+}
+
+.slider-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.slider-content > img {
+	border-radius: 4px;
+}
+
+.slider-desc {
+	background-color: rgba(0,0,0,0.8);
+	height: 65px;
+	color: #ddd;
+	position: absolute;
+	top: 355px;
+	box-sizing: border-box;
+	width: 100%;
+	line-height: 65px;
+}
+
+.slider-dots {
+	text-align: center;
+	line-height: 1.1;
+}
+
+.content-wrapper {
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	border: 3px solid rgba(0,0,0,0.3);
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.content-left-col {
+	width: 610px;
+	float: left;
+}
+
+.content-right-col {
+	width: 290px;
+	float: right;
+}
+
+
+article {
+	color: #a8a8a8;
+	margin-bottom: 80px;
+	padding-bottom: 10px;
+	background-color: rgba(0,0,0,0.2);
+}
+
+article h2 {
+	font-size: 1.5em;
+	padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+	border-bottom: 1px solid #373737;
+	margin-bottom: 15px;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0.2);
+}
+
+article h3 {
+	font-size: 0.8em;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+article p {
+	font-size: 0.8em;
+
+}
+
+article>ul  {
+    padding-left: 20px;
+    list-style-type: circle;
+}
+
+.article-button {
+	display: inline-block;
+	padding: 10px 20px;;
+	background-color: #0c63a9;
+	border-radius: 7px;
+	margin-top: 15px;
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 2px 2px 2px #333;
+}
+
+.article-button:visited {
+	color: #fff;
+	background-color: #0c63a9;
+	text-decoration: none;
+	
+}
+.article-button:hover {
+	color: #fff;
+	background-color: #034e92;
+}
+
+footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: .8em;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.copyright {
+	float: right;
+	color: #818082;
+}
+
+.category-accordeon {
+    list-style: none;
+    font-size: 1.2em;
+    line-height: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.category-accordeon li {
+    padding-left: 20px;
+    
+}
+
+.category-accordeon ul {
+    list-style: none;
+}
+
+li.active {
+    color: red;
+}
+
+.row {
+    margin: 20px;
+    margin-bottom: 70px;
+}
+
+.web {
+    height: 300px;
+    width: 260px;
+    background-color: red;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-right:50px;
+}
+
+.web:last-child {
+    margin-right: 0;
+}
+
+.web-picture {
+    height: 260px;
+    width: 260px;
+    margin-bottom: 10px;
+    background-color: green;
+}
+
+.web-title {
+    text-align: center;
+}
